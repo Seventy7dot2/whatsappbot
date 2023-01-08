@@ -26,10 +26,7 @@ def hello():
 
 @app.route("/sms", methods=['POST'])
 def sms_reply():
-    
-    # Fetch the message
     msg = request.form.get('Body')
-    # Create reply
     r= random.randint(0,14)
     resp = MessagingResponse()
     resp.message(quotes[r])
